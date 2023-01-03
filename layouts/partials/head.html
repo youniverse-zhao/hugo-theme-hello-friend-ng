@@ -70,3 +70,9 @@
 {{- if .Site.GoogleAnalytics }}
     {{ template "_internal/google_analytics.html" . }}
 {{- end}}
+
+<!-- Math Equation Support -->
+<!-- Credit: https://geoffruddock.com/math-typesetting-in-hugo/ -->
+{{ if .Params.mathjax }}
+  {{ partial "mathjax_support.html" . }}
+{{ end }}
